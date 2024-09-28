@@ -45,7 +45,7 @@ In your Terraform configuration file (`main.tf`), add the OCI provider configura
     }
 
 
-    Example :
+Example :
 
     ```hcl
     provider "oci" {
@@ -60,16 +60,20 @@ In your Terraform configuration file (`main.tf`), add the OCI provider configura
 ## Step 4: Optional - Configure ~/.oci/config File
 You can create a configuration file similar to AWS credentials (~/.aws/credentials) by adding the following to ~/.oci/config:
 
+```
 [DEFAULT]
 user=ocid1.user.oc1..xxxxxxEXAMPLExxxxxx
 fingerprint=12:34:56:78:9a:bc:de:f0:12:34:56:78:9a:bc:de:f0
 key_file=/path/to/private.pem
 tenancy=ocid1.tenancy.oc1..xxxxxxEXAMPLExxxxxx
 region=us-ashburn-1
+```
 
 ## Step 5: Initialize and Apply Terraform
 Now that your configuration is set up, initialize Terraform and apply your changes:
 
+```
 terraform init
 terraform plan
 terraform apply
+```
